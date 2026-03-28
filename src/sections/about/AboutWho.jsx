@@ -5,15 +5,18 @@ export default function AboutWho() {
     <section className="about-who">
       <div className="container who-grid">
 
-        {/* LEFT CONTENT */}
-        <div className="who-content">
+        {/* LEFT COLUMN — LABEL ONLY */}
+        <div className="who-left">
           <div className="who-label">
             <img src="/logo.png" alt="icon" />
             <span>WHO AM I?</span>
           </div>
+        </div>
 
+        {/* RIGHT COLUMN — CONTENT */}
+        <div className="who-right">
           <h2>
-            Hi I'm Desiree, a UX Designer with a passion for storytelling and
+            Hi I&apos;m Desiree, a UX Designer with a passion for storytelling and
             creating digital experiences that connect people in meaningful ways.
           </h2>
 
@@ -37,12 +40,12 @@ export default function AboutWho() {
             and design.
           </p>
 
-          <a href="/resume.pdf" className="resume-btn">
+          <a href="/resume.pdf" className="resume-btn" target="_blank" rel="noreferrer">
             View My Resume
           </a>
         </div>
 
-        {/* RIGHT IMAGES */}
+        {/* IMAGES — NOT REMOVED */}
         <div className="who-images">
           <img src="/about/about-1.jpg" alt="Work" />
           <img src="/about/about-2.jpg" alt="Military" />

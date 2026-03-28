@@ -10,13 +10,13 @@
   align-items: start;
 }
 
+/* LEFT */
 .tools-left h2 {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 500;
   font-size: 40px;
   line-height: 100%;
-  letter-spacing: 0%;
-  color: #000000;
+  color: #000;
   margin-bottom: 1rem;
 }
 
@@ -38,16 +38,16 @@
 }
 
 .resume-btn:hover {
-  background: #ff7861;
-  transform: translateY(-2px);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(255, 111, 97, 0.4);
+  color: #ffffff; /* explicitly locked */
 }
 
+/* RIGHT */
 .tools-right h3 {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 500;
   font-size: 30px;
-  line-height: 100%;
-  letter-spacing: 5%;
   color: #2E211B;
   margin-bottom: 1rem;
 }
@@ -56,11 +56,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.6rem;
-  width: 584px;
-  min-height: 176px;
-  border-radius: 30px;
-  opacity: 1;
-  padding: 1rem;
+  max-width: 584px;
 }
 
 .skill-pill {
@@ -77,81 +73,70 @@
   box-shadow: 0 4px 8px rgba(255, 111, 97, 0.2);
 }
 
+/* =========================
+   EXPERTISE (FIXED)
+   ========================= */
 .expertise-grid {
-  grid-column: span 2;
+  grid-column: 1 / -1;          /* span both columns */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
-  margin-top: 2rem;
+
+  max-width: 1200px;            /* center constraint */
+  margin: 3rem auto 0;          /* CENTER THE BLOCK */
 }
 
 .expertise-card {
-  width: 655px;
-  min-height: 88px;
-  background: #FFFFFF;
+  background: #ffffff;
   border: 1px solid #E5E5E5;
   border-radius: 12px;
   padding: 1.5rem;
-  opacity: 1;
+
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 .expertise-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
 }
 
 .expertise-icon {
   width: 60px;
   height: 60px;
-  object-fit: contain;
-  flex-shrink: 0;
   border: 1px solid #FF9E80;
   border-radius: 8px;
   padding: 0.5rem;
   background: #FFF5F2;
+  flex-shrink: 0;
 }
 
-.expertise-content {
-  flex: 1;
-}
-
-.expertise-card h4 {
+.expertise-content h4 {
   font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-weight: 500;
   font-size: 1.1rem;
-  line-height: 100%;
-  letter-spacing: 0%;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   color: #9E9E9E;
 }
 
-.expertise-card p {
+.expertise-content p {
   color: #9E9E9E;
   line-height: 1.6;
   font-size: 0.95rem;
 }
 
-/* Responsive Design */
+/* =========================
+   RESPONSIVE
+   ========================= */
 @media (max-width: 768px) {
-  .tools {
-    padding: 3rem 0;
-  }
-
   .tools-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
   .expertise-grid {
-    grid-column: span 1;
     grid-template-columns: 1fr;
-  }
-
-  .tools-left h2 {
-    font-size: 1.75rem;
   }
 }

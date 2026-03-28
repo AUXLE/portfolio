@@ -3,114 +3,186 @@
   background: #fafafa;
 }
 
+.about-background .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* =========================
+   GRID — MATCH ABOUT WHO
+   ========================= */
 .background-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 3rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  grid-template-columns: 160px 1fr; /* LEFT LABEL, RIGHT CONTENT */
+  column-gap: 4rem;
+  row-gap: 3rem;
+  align-items: start;
 }
 
-/* Label */
+/* Left spacer = label column */
+.background-spacer {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* =========================
+   SECTION LABEL (LEFT)
+   ========================= */
 .section-label {
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: #ff6f61;
-  font-family: 'SF Pro Display', sans-serif;
-  font-size: 30px;
-  font-weight: 500;
-  line-height: 100%;
-  letter-spacing: 0;
-  margin-bottom: 1rem;
-  text-align: right;
+  line-height: 1;
 }
 
-/* Text */
+/* =========================
+   RIGHT CONTENT
+   ========================= */
+.background-content {
+  max-width: 840px;
+}
+
+/* Title — editorial, calm */
 .background-content h2 {
-  font-size: 1.7rem;
-  line-height: 1.45;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-weight: 500;
-  color: #6b6b6b;
-  margin-bottom: 1.8rem;
-  text-align: right;
+  font-size: 40px;
+  line-height: 1.25;
+  color: #6f6864;
+
+  margin-bottom: 2.5rem;
 }
 
+/* Body text */
 .background-content p {
-  color: #7a7a7a;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
   line-height: 1.75;
-  margin-bottom: 1.2rem;
-  font-size: 0.95rem;
-  text-align: right;
+  color: #676564;
+
+  margin-bottom: 1.75rem;
+  max-width: 760px;
 }
 
-/* Education Wrapper */
+/* =========================
+   EDUCATION SECTION
+   ========================= */
 .education-wrapper {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 3rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  grid-template-columns: 160px 1fr;
+  column-gap: 4rem;
+  max-width: 1200px;
+  margin: 4rem auto 0;
+}
+
+/* Spacer column */
+.education-spacer {
+  display: block;
 }
 
 /* Education Card */
+/* =========================
+   EDUCATION CARD — REFINED
+   ========================= */
 .education-card {
-  background: #fff5f2;
-  border-left: 4px solid #ff8a75;
-  padding: 2rem;
-  border-radius: 6px;
-  margin-top: 3rem;
-  text-align: right;
+  background: #fff9f5;                 /* softer peach */
+  border: 1px solid #ffd2c7;            /* subtle full border */
+  border-left: 6px solid #ff8a75;       /* strong accent strip */
+  padding: 2.6rem 2.8rem;
+  border-radius: 12px;
 }
 
+/* Card title */
 .education-card h3 {
-  font-size: 1rem;
-  margin-bottom: 1.4rem;
-  color: #333;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: #2e2e2e;
+  margin-bottom: 2rem;
 }
 
+/* Each education block */
 .education-item {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.8rem;
 }
 
+/* Degree / Certification */
 .education-item strong {
-  font-size: 0.9rem;
   display: block;
-  margin-bottom: 0.2rem;
+  font-size: 16px;
+  font-weight: 600;                    /* stronger hierarchy */
+  color: #2f2f2f;
+  margin-bottom: 0.3rem;
 }
 
+/* Institution (italic like image) */
 .school {
-  font-size: 0.85rem;
-  color: #777;
-  margin-bottom: 0.2rem;
+  font-size: 14px;
+  font-style: italic;
+  color: #6f6f6f;
+  margin-bottom: 0.4rem;
 }
 
+/* Focus / description */
 .focus {
-  font-size: 0.8rem;
-  color: #888;
+  font-size: 14px;
+  color: #8a8a8a;
+  line-height: 1.6;
 }
 
-/* Learning Wrapper */
+/* =========================
+   CONTINUOUS LEARNING
+   ========================= */
 .learning-wrapper {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 3rem;
-  max-width: 1100px;
-  margin: 0 auto;
+  grid-template-columns: 160px 1fr;
+  column-gap: 4rem;
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  margin-top: 2rem!important;
 }
 
-/* Learning */
+.learning-spacer {
+  display: block;
+}
+
 .learning {
-  margin-top: 2rem;
-  text-align: right;
+  max-width: 760px;
 }
 
 .learning p {
-  color: #7a7a7a;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 18px;
   line-height: 1.7;
-  font-size: 0.9rem;
+  color: #6f6f6f;
 }
 
-/* Responsive */
-@media (max-width: 900px) {
-  .background-grid {
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1024px) {
+  .background-grid,
+  .education-wrapper,
+  .learning-wrapper {
     grid-template-columns: 1fr;
+  }
+
+  .section-label {
+    margin-bottom: 1.5rem;
+  }
+
+  .background-content h2 {
+    font-size: 32px;
+  }
+
+  .background-content p,
+  .learning p {
+    font-size: 16px;
   }
 }

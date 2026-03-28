@@ -4,12 +4,20 @@ export default function AboutBackground() {
   return (
     <section className="about-background">
       <div className="container background-grid">
+{/* 
+        <div className="background-spacer"></div> */}
 
-        <div className="background-spacer"></div>
+        {/* LEFT COLUMN — LABEL ONLY */}
+        <div className="who-left">
+          <div className="who-label">
+            {/* <img src="/logo.png" alt="icon" /> */}
+            <span>BACKGROUND & EDUCATION</span>
+          </div>
+        </div>
 
         {/* RIGHT CONTENT */}
         <div className="background-content">
-          <p className="section-label">BACKGROUND & EDUCATION</p>
+          {/* <p className="section-label">BACKGROUND & EDUCATION</p> */}
 
           <h2>
             My background in Interactive Media taught me that great design is

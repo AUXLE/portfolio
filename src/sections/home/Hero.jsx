@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="hero-overlay" />
 
       <div className="hero-content">
-        <p className="hero-intro">Hi, I'm Desiree,</p>
+        <p className="hero-intro">Hi, I'm <span className="hero-accent">Desiree</span>,</p>
 
         <h1 className="hero-title">
           UX Designer turning complex problems into elegant,
@@ -18,8 +18,16 @@ export default function Hero() {
         </p>
 
         <div className="hero-buttons">
-          <button className="btn primary">Projects</button>
-          <button className="btn secondary">Resume</button>
+          <button className="hero-btn">Projects</button>
+                    {/* RESUME — VIEWABLE + DOWNLOADABLE */}
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hero-btn"
+          >
+            Resume
+          </a>
         </div>
       </div>
 

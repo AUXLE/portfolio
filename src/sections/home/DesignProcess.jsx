@@ -5,11 +5,13 @@ export default function DesignProcess() {
   return (
     <section className="process" id="process">
       <div className="container">
+
+        {/* SECTION TITLE */}
+        <p className="section-label2">Design Process</p>
+
         <div className="process-header">
           <img src="/star1.png" alt="" className="process-icon-left" />
-          <h2 className="process-title">
-            How I make it happen
-          </h2>
+          <h2 className="process-title">How I make it happen</h2>
           <img src="/star2.png" alt="" className="process-icon-right" />
         </div>
 
@@ -17,7 +19,7 @@ export default function DesignProcess() {
           My design process transforms complex ideas into intuitive,
           human-centered experiences.
         </p>
-        
+
         <img src="/lightbulb.png" alt="" className="process-icon-bottom" />
 
         <div className="process-grid">

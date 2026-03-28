@@ -1,9 +1,16 @@
+.container {
+  position: relative;
+}
+
 .process {
   padding: 5rem 0;
   background: #fafafa;
   text-align: center;
 }
 
+/* =========================
+   HEADER
+   ========================= */
 .process-header {
   display: flex;
   align-items: center;
@@ -12,26 +19,25 @@
   margin-bottom: 0.5rem;
 }
 
+/* =========================
+   SUN ICONS (ROTATING)
+   ========================= */
 .process-icon-left,
 .process-icon-right {
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  opacity: 0.8;
-}
-
-.process-icon-left {
   width: 181px;
   height: 112px;
+  object-fit: contain;
   opacity: 1;
+  animation: rotateSun 18s linear infinite;
 }
 
 .process-icon-right {
-  width: 181px;
-  height: 112px;
-  opacity: 1;
+  animation-direction: reverse;
 }
 
+/* =========================
+   BOTTOM ICON
+   ========================= */
 .process-icon-bottom {
   width: 100.757px;
   height: 100.016px;
@@ -42,16 +48,20 @@
   transform: rotate(104.28deg);
 }
 
-.section-label {
-  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-weight: 600;
+/* =========================
+   SECTION TITLE
+   ========================= */
+.section-label2 {
+  text-align: center;
   font-size: 40px;
-  line-height: 100%;
-  letter-spacing: 0%;
-  color: #FF6F61;
-  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #ff6f61;
+  margin-bottom: 8px;
 }
 
+/* =========================
+   TITLES
+   ========================= */
 .process-title {
   font-size: 2rem;
   margin-bottom: 0.5rem;
@@ -65,19 +75,24 @@
   font-size: 1.1rem;
 }
 
+/* =========================
+   GRID
+   ========================= */
 .process-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
 }
 
+/* =========================
+   CARD
+   ========================= */
 .process-card {
   background: #fff;
   border: 1px solid #FF9E80;
   border-radius: 12px;
   padding: 2rem 1.5rem;
   min-height: 333px;
-  opacity: 1;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   text-align: center;
 }
@@ -87,6 +102,9 @@
   box-shadow: 0 8px 24px rgba(212, 231, 245, 0.3);
 }
 
+/* =========================
+   STEP NUMBER
+   ========================= */
 .process-number {
   width: 40px;
   height: 40px;
@@ -101,6 +119,9 @@
   font-size: 1.1rem;
 }
 
+/* =========================
+   CARD TEXT
+   ========================= */
 .process-card h3 {
   font-size: 1.2rem;
   margin-bottom: 0.75rem;
@@ -114,23 +135,86 @@
   font-size: 0.95rem;
 }
 
-/* Responsive Design */
+/* =========================
+   ROTATION ANIMATION
+   ========================= */
+@keyframes rotateSun {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =========================
+   ACCESSIBILITY
+   ========================= */
+@media (prefers-reduced-motion: reduce) {
+  .process-icon-left,
+  .process-icon-right {
+    animation: none;
+  }
+}
+
+/* =========================
+   RESPONSIVE — TABLET
+   ========================= */
 @media (max-width: 1024px) {
   .process-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  .process-icon-left,
+  .process-icon-right {
+    width: 140px;
+    height: auto;
+  }
 }
 
+/* =========================
+   RESPONSIVE — MOBILE
+   ========================= */
 @media (max-width: 600px) {
   .process {
     padding: 3rem 0;
   }
 
+  .section-label2 {
+    font-size: 28px;
+  }
+
+  .process-header {
+    gap: 1rem;
+  }
+
+  .process-icon-left,
+  .process-icon-right {
+    width: 90px;
+    height: auto;
+  }
+
   .process-title {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
+    line-height: 1.25;
+  }
+
+  .process-subtitle {
+    font-size: 1rem;
+    padding: 0 1rem;
   }
 
   .process-grid {
     grid-template-columns: 1fr;
+  }
+
+  .process-card {
+    min-height: auto;
+  }
+
+  .process-icon-bottom {
+    width: 70px;
+    height: auto;
+    margin: 1.5rem auto;
   }
 }

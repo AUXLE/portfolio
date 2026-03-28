@@ -15,7 +15,8 @@ export default function ToolsExpertise() {
             create user-centered solutions that drive measurable business impact.
           </p>
 
-          <a href="/resume.pdf" className="resume-btn">
+          <a href="/resume.pdf" className="resume-btn"  target="_blank"
+            rel="noopener noreferrer">
             View My Resume
           </a>
         </div>

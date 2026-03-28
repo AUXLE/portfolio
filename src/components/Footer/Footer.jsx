@@ -26,7 +26,7 @@ export default function Footer() {
         {/* Social */}
         <div className="footer-col">
           <h4>Social</h4>
-          <a href="https://linkedin.com" target="_blank" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/desiree-walker/" target="_blank" rel="noreferrer">
             LinkedIn
           </a>
           <a href="https://instagram.com" target="_blank" rel="noreferrer">
@@ -37,7 +37,7 @@ export default function Footer() {
         {/* Contact */}
         <div className="footer-col">
           <h4>Contact</h4>
-          <a href="mailto:hello@desiree.com">Email</a>
+          <a href="mailto:Desireewalkerux@yahoo.com">Email</a>
           <a href="/resume.pdf" target="_blank" rel="noreferrer">
             Resume
           </a>
